@@ -1,0 +1,297 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    color: #000000;
+    background-color: #DFDFDF;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* ---- TYPO ---- */
+
+h1,
+h4,
+h3,
+p {
+    margin: 0;
+    line-height: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+input {
+    font-size: 1rem;
+    padding: .5em;
+}
+
+/* ---- STYLING ---- */
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+    cursor: pointer;
+}
+
+/*Fixes the event.target returning the icon inside of the button*/
+button > * {
+    pointer-events: none;
+}
+
+.container {
+    width: 1367px;
+    margin: 0 auto;
+}
+
+.inner-container {
+    width: 85%;
+}
+
+main,
+header {
+    width: 100%;
+}
+
+header {
+    background-color: #6b86e8;
+    opacity: 1;
+    background-image: radial-gradient(#DFDFDF 2px, #6b86e8 2px);
+    background-size: 1em 1em;
+    position: fixed;
+    height: fit-content;
+    padding: 3rem 0;
+}
+
+div.inner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    text-shadow: #DFDFDF 0.3em 0.3em 0.3em ;
+    border: #5A5A5A;
+}
+
+form {
+    height: 2rem;
+    position: absolute;
+    bottom: -1em;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    background-color: #D1D1D2;
+    border-radius: 6px;
+}
+
+.search-bar {
+    color: #5A5A5A;
+}
+
+#search-icon {
+    width: 1.5em;
+    padding-left: .5em;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+#search-bar,
+#search-bar::selection {
+    width: 100%;
+    border: none;
+    background-color: #D1D1D2;
+}
+
+#search-bar:focus,
+input:focus {
+    outline: none
+}
+
+#search-button {
+    width: 25%;
+    border: none;
+    background-color: #B4B4B4;
+    border-radius: 0 6px 6px 0;
+    color: #000000;
+}
+
+#search-button:hover {
+    cursor: pointer;
+}
+
+main {
+    height: 100%;
+    background-color: #DFDFDF;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin-top: 5rem;
+    padding: 3em 0;
+}
+
+.start-app {
+    height: calc(100vh - 5rem);
+    color: #5A5A5A;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+.start-app a {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.start-app h1 {
+    margin-bottom: 1rem;
+}
+
+.start-app:hover {
+    cursor: pointer;
+}
+
+.content,
+.content-title,
+.content-info {
+    display: flex;
+}
+
+.content {
+    padding: 1.6rem 0;
+    border-bottom: 0.5px solid #D3D3D3;
+}
+
+.content:first-child {
+    margin-top: 1rem;
+}
+
+.content:last-child {
+    border-bottom: none;
+}
+
+.content img {
+    height: 9.2rem;
+    margin-left: 0;
+    margin-right: 1.6rem;
+}
+
+.content-text {
+    margin-left: 0;
+    align-items: baseline;
+}
+
+.content-info p {
+    margin-right: 1rem;
+    margin-top: 0.65rem;
+    min-width: 3rem;
+}
+
+.content-info button {
+    border: none;
+    background-color: #DFDFDF;
+    color: #000000;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    align-self: end;
+}
+
+.content p,
+.content-info button {
+    font-size: 0.75rem;
+}
+
+.star-icon {
+    color: #0139FA;
+    margin-right: 0.1rem;
+    margin-left: 0.5rem;
+}
+
+.content-plot {
+    color: #5A5A5A;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+/* ---- Media Queries ---- */
+
+@media (max-width: 1366px) {
+    .container {
+        width: 100vw;
+    }
+}
+
+@media (max-width: 550px) {
+    .content {
+        flex-direction: column;
+    }
+    
+    .content img {
+        margin-bottom: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6rem;
+        font-weight: 800;
+    }
+    
+    h4 {
+        font-size: 0.9rem;
+        font-weight: 700;
+    } 
+}
+
+@media (max-width: 360px) {
+    h1 {
+        font-size: 1.1em;
+        font-weight: 800;
+    }
+    
+    h4 {
+        font-size: 0.8em;
+        font-weight: 700;
+    } 
+    
+    input::placeholder {
+        font-size: 0.8em;
+    }
+    
+}
+
+@media (max-height: 580px) {
+    header {
+        height: fit-content;
+    }
+}
